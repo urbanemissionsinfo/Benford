@@ -48,7 +48,7 @@
 	</div>
 	<div class="blob">
 		<img 
-			src="/data_issues_clippings.png"
+			src="./data_issues_clippings.png"
 			alt="News Clippings"
       style="width: 100%; height: auto; object-fit: cover;">
 	</div>
