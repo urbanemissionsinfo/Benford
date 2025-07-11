@@ -1,14 +1,16 @@
-// import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-
-/** @type {import('@sveltejs/kit').Config} */
 
 export default {
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      // optionally add fallback: 'index.html' if using SPA-style routing
+      // fallback: 'index.html'
+    }),
     paths: {
-      base: '/Benford', // IMPORTANT: Replace with the repo name
+      base: '/Benford', // important for GitHub Pages
+    },
+    prerender: {
+      entries: ['*'], // this is the default, but you can be explicit
     }
   }
 };
