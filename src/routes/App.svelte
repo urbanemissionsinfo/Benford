@@ -24,7 +24,6 @@
 
 
 </script>
-<div id="main">
 <div id="header">
 	How to spot anomalies in AQI data?
 	<br>
@@ -133,14 +132,12 @@
         </p>
 </div>
 
-</div>
 <style>
-	#main{
+	:global(body){
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: 1.5rem;
-
 	}
-	#main a{
+	:global(body){
 		color: royalblue;
 	}
 	
