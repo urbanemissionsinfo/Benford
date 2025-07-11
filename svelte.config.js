@@ -4,12 +4,13 @@ const dev = process.env.NODE_ENV === 'development';
 
 export default {
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      pages: 'docs',
+      assets: 'docs',
+      fallback: null
+    }),
     paths: {
-      base: dev ? '' : '/Benford'  // This MUST match your repo name
-    },
-    prerender: {
-      entries: ['*']
+      base: dev ? '' : '/Benford' // replace with your repo name
     }
   }
 };
