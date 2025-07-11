@@ -47,8 +47,7 @@
 >
 <text fill="black"
 			  text-anchor="middle"
-			  font-size="34"
-        font-weight="bold"
+			  style="font-size: 2rem; font-weight: bold;"
 			  x={width/2}
 			  y={50}>
   {title}
@@ -182,7 +181,7 @@
     </text>
   </g>
 	<!-- Legend in top-right corner -->
-	<g transform={`translate(${width - marginRight - 160}, ${marginTop - 20})`}>
+	<g transform={`translate(${width - marginRight - 210}, ${marginTop - 20})`}>
 	  <!-- Square marker for the line -->
 	  <rect width="24" height="24" fill={stroke_color} />
 		<line stroke={stroke_color} stroke-width="2" x1="-15" y1="12" x2="40" y2="12" />
@@ -193,3 +192,10 @@
 	  </text>
 	</g>
 </svg>
+
+<style>
+  svg text{
+		font-family: 'system-ui';
+    font-size: 1.5rem;
+	}
+</style>

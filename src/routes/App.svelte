@@ -69,7 +69,7 @@
 </div>
 
 <!-- City Selector -->
-<div class=row>
+<div class=row style="border:3px solid royalblue">
   <label for="city" style="margin-right: 10px;">Select City:</label>
   <select id="city" bind:value={selectedCity}>
     <option disabled selected value="">-- Choose a city --</option>
@@ -118,9 +118,17 @@
 		bar_color={cityData['2024']?.ed> 0.25 ? "tomato" : "RoyalBlue"} />
 </div>
 
-<div class="row blob" style="width: 100%;">
-	<p>Deviation from Benford’s law is only an indicator and not a foolproof law. Statistical tests can be applied to investigate deviations from Benford's law.
-		<br> More details of these tests <a href="https://urbanemissions.info/wp-content/uploads/docs/SIM-49-2024.pdf"> are available in this report.</a></p>
+<div class="row blob" style="width: 100%; text-align:center">
+	<p>
+		Deviation from Benford’s law is only an indicator and not a foolproof law. Statistical tests can be applied to investigate deviations from Benford's law.
+		Overall, it is observed that cities with denser monitor networks (15+ stations) deviated less from Benford's law. Even if they deviated, their annual distributions are consistent and 
+		thus predictable (Eg: Chennai).
+		More details of these tests are <a href="https://urbanemissions.info/wp-content/uploads/docs/SIM-49-2024.pdf"> available in this report.</a> <br>
+		<br> Further resources:<br>
+		<a href="https://urbanemissionsinfo.github.io/AQI_bulletins/data/index.html">AQI Bulletins data (2015-2025)</a> | 
+		<a href="https://urbanemissionsinfo.github.io/AQI_bulletins/"> AQI Bulletins visualisation</a> | 
+		<a href="https://urbanemissionsinfo.github.io/AQI_bulletins/scrollytale/"> Scrolly tale on the state of India's ambeint monitoring capacity </a>
+	</p>
 </div>
 
 <div id="footer">
@@ -133,11 +141,7 @@
 </div>
 
 <style>
-	:global(body){
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-		font-size: 1.5rem;
-	}
-	:global(body){
+	a{
 		color: royalblue;
 	}
 	
@@ -149,14 +153,15 @@
 		color:white;
 		font-weight:bold;
 		font-size:2rem;
+		font-family: 'system-ui';
 		margin: 3px;
 	}
 	.row {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
-		justify-content: center;
 		margin: 2px;
+		justify-content: center;
 		align-items: center;
 	}
 	.blob {
@@ -164,8 +169,10 @@
 		flex-shrink: 0; /* Prevent collapsing */
 		align-content: center;
 	}
-	.blob p, .blob ul{
+	p, ul, label{
 		margin:20px;
+		font-family: 'system-ui';
+		font-size:1.5rem;
 	}
 
 	select {
@@ -176,6 +183,8 @@
 	}
 	#footer{
 		background-color: royalblue;
+		font-family: 'system-ui';
+		font-size:1.5rem;
 	}
 
 	#footer a, #footer p{
@@ -183,15 +192,15 @@
 		padding-right: 10px;
 		text-align: center;
     	font-size: 0.9em;
-
+		font-family: 'system-ui';
 	}
 	@media (max-width: 1000px) {
 		.row {
 		flex-direction: column;
 		width: 100%;
-		justify-content: center;
-		align-items: center;
 		margin: 10px;
+		align-items: center;
+
 	}
 	.blob {
 		width: 100%;
