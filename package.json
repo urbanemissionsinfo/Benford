@@ -1,5 +1,6 @@
 {
-  "name": "your-app",
+  "homepage": "https://urbanemissionsinfo.github.io/Benford",
+  "name": "benford",
   "private": true,
   "version": "0.0.1",
   "type": "module",
