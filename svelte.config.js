@@ -1,16 +1,15 @@
 import adapter from '@sveltejs/adapter-static';
 
+const dev = process.env.NODE_ENV === 'development';
+
 export default {
   kit: {
-    adapter: adapter({
-      // optionally add fallback: 'index.html' if using SPA-style routing
-      // fallback: 'index.html'
-    }),
+    adapter: adapter(),
     paths: {
-      base: '/Benford', // important for GitHub Pages
+      base: dev ? '' : '/Benford'  // This MUST match your repo name
     },
     prerender: {
-      entries: ['*'], // this is the default, but you can be explicit
+      entries: ['*']
     }
   }
 };
